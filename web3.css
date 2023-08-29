@@ -1,0 +1,366 @@
+@font-face {
+    font-family: inter-Regular;
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+@font-face { 
+    font-family: inter-ExtraBold;
+    src:url(assets/fonts/static/Inter-ExtraBold.ttf);
+}
+
+@font-face { 
+    font-family: inter-Bold;
+    src:url(assets/fonts/static/Inter-Bold.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: inter;   
+    margin: 0.5em 0.5rem;
+}
+
+p {
+    font-size: 15px;
+}
+
+.nav {
+    display:flex;
+    justify-content: space-between;
+}
+
+.nav .logo{
+    padding-bottom: 0.8rem;
+    height: 4rem;
+
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+    padding-top: 0.3rem; 
+}
+
+
+.nav li {
+    justify-content: space-between;
+    padding-right: 0.2rem;
+
+}
+
+.menu a:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+.menu > a{
+    color: hsl(236, 13%, 42%);
+    text-decoration: none;
+    font-family: inter-Regular;
+ }
+
+.btn{
+    display: none;
+ }
+
+ .bar{
+    display:flex;
+    flex-direction:column;
+    height: 0.2rem;
+    width: 2rem;
+    background-color: hsl(236, 13%, 42%);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+ .grid-container {
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    grid-template-rows: 100% 100%;
+    grid-template-areas: 'image aside'
+                         'main  aside';
+    height: 45vh;
+    gap: 1.5rem;
+ }
+
+ .main-image{ 
+    grid-area:image;
+ }
+
+ .main{
+    grid-area: main;
+ }
+
+ .overview {
+    width:90%;
+ }
+ .aside {
+    grid-area: aside;
+    background-color: hsl(240, 100%, 5%);
+    margin-top: 1.0rem;
+    height: 80%;
+    width: 90%; 
+ }
+
+ .aside-content {
+    padding:1rem 0.8rem;
+
+ }
+
+ .wide-img {
+    width:100%;
+    height:100%;
+    margin-top: 0.5rem;
+ }
+
+ .main { 
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px
+ }
+
+ 
+.section {
+    display:flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.image {
+    width:10vw;
+    height: 20vh; 
+    
+}
+
+button {
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    background: hsl(5, 85%, 63%);
+    width: 160px;
+    height:30px;
+    border: none;
+    color: hsl(36, 100%, 99%);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: Bold;
+    cursor: pointer;
+     
+}
+button:hover {
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+}
+
+#line {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: hsl(236, 13%, 42%);
+    height:0.15rem;
+}
+
+
+.main h1 {
+    width: 50%;
+    display: inline-block;
+    margin-right: 5rem;
+    font-family: 'inter-ExtraBold';
+    font-weight: 800;
+}
+
+.New h1 {
+    color: hsl(35, 77%, 62%)
+
+}
+.aside-content h3 {
+    color: hsl(36, 100%, 99%);
+    padding-top: 1rem;
+}
+
+.aside-content h3:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer; 
+}
+
+.aside-content p {
+    color: hsl(236, 13%, 42%);
+    padding-bottom: 1rem;
+    
+}
+
+.section {
+    display:flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8rem;
+    width:100%;
+}
+
+
+.image {
+    width:10vw;
+    height: 20vh; 
+    
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+    margin-top:15rem;
+
+}
+
+.footer h2 {
+    color:hsl(236, 13%, 42%);
+}
+
+.footer h4:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+
+
+@media (max-width:475px){
+    *{
+        margin: 0.3rem;
+        padding-right: 0.6rem;
+    }
+    html, body{
+        overflow-x: hidden;
+    }
+    body{ 
+        position:relative;
+        box-sizing: border-box;
+    }
+
+    .menu{
+        position: fixed;
+        left:-100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        height: 40vh;
+        border-radius: 5px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .menu.active {
+        left: 0;
+    }
+
+    .menu a{
+        text-decoration: none;
+        color: hsl(236, 13%, 42%);
+        display:flex;
+        flex-direction: column;
+    }
+    
+    .nav {
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        width: 156vw;
+    }
+
+    .btn {
+        display:block;
+        cursor: pointer;
+    }
+
+    .btn.active .bar:nth-child(2) {
+        opacity:0;
+    }
+    .btn.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .btn.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .grid-container {
+        grid-template-areas: 'image'
+                              'main'
+                              'aside';
+        grid-template-rows:100% 100% 1fr ;
+    }
+
+    .wide-img {
+        width:90%;
+    }
+
+    .main {
+        display: grid;
+        grid-template-areas: 'question'
+                             'overview';
+        grid-template-rows: 1fr 1fr;
+
+    }
+    
+    .main h1 {
+        grid-area: question;
+        width:100vw;
+        padding-right: 8rem; 
+   
+    }
+    .overview {
+        grid-area: overview;
+        width:100%;
+        padding-right: 7rem;
+
+    
+    }
+
+    .aside{
+        height:90%;
+        margin-top: 2rem;
+    }
+
+    .aside-content {
+        width: 80%;
+    }
+
+    .footer {
+        display:grid;
+        grid-template-areas: 'one'
+                             'two'
+                             'three'; 
+        grid-template-rows: 1fr 1fr 100vw;  
+        gap: 0.02rem;    
+        margin-top: 50rem;
+    }
+
+    .one {
+        grid-area: one;
+    
+    }
+    .two {
+        grid-area: two;
+    }
+    .three {
+        grid-area: three;
+    }
+    
+    .section {
+        width: 100vw;
+        margin-top: 2rem;
+    }
+
+    .image {
+        height: 15vh;
+        width:40vw;
+        margin-top: 3rem;
+    }
+
+
+    .Retro, .laptops, .gaming {
+        padding-top: 2rem;
+    }
+
+    }
